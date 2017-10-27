@@ -8,11 +8,12 @@ public class HelloWorld {
         int min = Integer.parseInt(args[0]);
         int sum = 0;
         for (i = 0; i < args.length; i++){
-            sum += Integer.parseInt(args[i]);
-            if (Integer.parseInt(args[i]) > max) {
-                max = Integer.parseInt(args[i]);
-            } else {
-                min = Integer.parseInt(args[i]);
+            int actualValue = Integer.parseInt(args[i]);
+            sum += actualValue;
+            if (actualValue > max) {
+                max = actualValue;
+            } else if (actualValue < min) {
+                min = actualValue;
             }
         }
         System.out.println("max érték: " + max);
